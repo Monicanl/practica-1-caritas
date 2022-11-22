@@ -1,13 +1,1 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><block type="device_forever" id="$V-Ogjrl$Ll9VzePi72L" x="146" y="73"><statement name="HANDLER"><block type="device_show_leds" id="W)i0^Nrr9r;UApniSpcc"><field name="LEDS">`
-        . # . # . 
-        # # # # # 
-        # # # # # 
-        . # # # . 
-        . . # . .
-        `</field><next><block type="device_show_leds" id="#[EZi%M9)g?5GCCp9~,W"><field name="LEDS">`
-        . . . . . 
-        . # # # . 
-        . # # # . 
-        . . # . . 
-        . . . . .
-        `</field></block></next></block></statement></block></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><block type="pxt-on-start" id="A.EfEfYOw%WT.|{j}Pq1" x="260" y="174"><statement name="HANDLER"><block type="input_set_sound_threshold" id="7/qqQLy8?ku@MPW|08dx"><field name="sound">SoundThreshold.Loud</field><value name="value"><shadow type="math_number_minmax" id="ln0*3Wn/ZVtpJ(GTTR!t"><mutation min="0" max="255" label="Threshold" precision="0"></mutation><field name="SLIDER">43</field></shadow></value></block></statement></block><block type="input_on_sound" id="d%nrD/HCj)!D,,VxEL//" x="235" y="347"><field name="sound">DetectedSound.Loud</field><statement name="HANDLER"><block type="controls_repeat_ext" id="}FD6/lwvlK^iC16?#zmD"><value name="TIMES"><shadow type="math_whole_number" id="#Z278k@VzD2)]?{mou=K"><field name="NUM">4</field></shadow></value><statement name="DO"><block type="basic_show_icon" id="ta}XxSi80s;3`t=B^:*6"><field name="i">IconNames.Heart</field><next><block type="basic_show_icon" id="v_NG4Gn^l!l$V96?T|Sb"><field name="i">IconNames.SmallHeart</field></block></next></block></statement></block></statement></block></xml>
