@@ -1,5 +1,17 @@
-def on_gesture_shake():
-    basic.show_number(randint(0, 6))
-    basic.pause(500)
-    basic.clear_screen()
-input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+Izquierda = False
+
+def on_forever():
+    global Izquierda
+    if maqueen.ultrasonic(PingUnit.CENTIMETERS) < 20 and maqueen.ultrasonic(PingUnit.CENTIMETERS) != 0:
+        Izquierda = Math.random_boolean()
+        if Izquierda == True:
+            maqueen.motor_run(maqueen.Motors.M2, maqueen.Dir.CW, 255)
+            maqueen.motor_run(maqueen.Motors.M1, maqueen.Dir.CW, 0)
+            basic.pause(500)
+        if Izquierda == False:
+            maqueen.motor_run(maqueen.Motors.M1, maqueen.Dir.CW, 255)
+            maqueen.motor_run(maqueen.Motors.M2, maqueen.Dir.CW, 0)
+            basic.pause(500)
+    else:
+        maqueen.motor_run(maqueen.Motors.ALL, maqueen.Dir.CW, 255)
+basic.forever(on_forever)
